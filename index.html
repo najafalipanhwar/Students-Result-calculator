@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🎓 Student Result Calculator</h1>
+        <p>Enter student information and marks to calculate the result.</p>
+    </header>
+
+    <section class="student-info">
+        <div class="input-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student name">
+        </div>
+        <div class="input-group">
+            <label for="rollNumber">Roll Number</label>
+            <input type="text" id="rollNumber" placeholder="Enter roll number">
+        </div>
+    </section>
+
+    <section class="subjects-section">
+        <div class="section-heading">
+            <h2>Subjects & Marks</h2>
+            <button id="addSubjectBtn" class="add-btn" type="button">+ Add Subject</button>
+        </div>
+        <div id="subjectsContainer"></div>
+    </section>
+
+    <div class="buttons">
+        <button id="calculateBtn" class="calculate-btn" type="button">Calculate Result</button>
+        <button id="resetBtn" class="reset-btn" type="button">Reset</button>
+    </div>
+
+    <section id="resultSection" class="result-section hidden">
+        <div class="result-header">
+            <h2>📄 Student Result</h2>
+        </div>
+
+        <div class="student-result-info">
+            <p><strong>Name:</strong> <span id="resultName">-</span></p>
+            <p><strong>Roll No:</strong> <span id="resultRoll">-</span></p>
+        </div>
+
+        <div class="result-cards">
+            <div class="result-card"><span>Total Marks</span><strong id="resultTotal">0</strong></div>
+            <div class="result-card"><span>Obtained Marks</span><strong id="resultObtained">0</strong></div>
+            <div class="result-card"><span>Percentage</span><strong id="resultPercentage">0%</strong></div>
+            <div class="result-card"><span>Grade</span><strong id="resultGrade">-</strong></div>
+            <div class="result-card"><span>Status</span><strong id="resultStatus">-</strong></div>
+        </div>
+
+        <div id="subjectResult"></div>
+        <button id="printBtn" class="print-btn" type="button">🖨️ Print Result</button>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
